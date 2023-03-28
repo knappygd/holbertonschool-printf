@@ -11,7 +11,7 @@ int (*get_func(char *s))(va_list);
 typedef struct format
 {
 	char *format;
-	int (*f)(va_list);
+	int (*func)(va_list);
 	int r = f;
 } f;
 
