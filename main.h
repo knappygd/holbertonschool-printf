@@ -13,6 +13,6 @@ typedef struct format
 	char *format;
 	int (*f)(va_list);
 	int r = f;
-} format;
+} f;
 
 #endif
