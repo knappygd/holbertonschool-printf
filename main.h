@@ -12,7 +12,6 @@ typedef struct format
 {
 	char *format;
 	int (*func)(va_list);
-	int r = f;
 } f;
 
 #endif
