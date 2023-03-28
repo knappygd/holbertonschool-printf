@@ -8,7 +8,7 @@
  *
  * Return: a pointer to the function that corresponds
  */
-int (*get_func(char *s))(va_list)
+int (*get_func(char s))(va_list)
 {
 	f ft[] = {
 		{"c", print_c},
@@ -20,7 +20,7 @@ int (*get_func(char *s))(va_list)
 
 	while (i < 4)
 	{
-		if (*(ft[i]).format == *s)
+		if (*(ft[i]).format == s)
 			return (ft[i].func);
 		i++;
 	}

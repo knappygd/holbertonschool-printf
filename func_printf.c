@@ -11,10 +11,11 @@
 int print_s(va_list s)
 {
 	int i, str_len = 0;
+	char *str = va_arg(s, char *);
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 		str_len++;
-	write(1, s, str_len);
+	write(1, str, str_len);
 	return (str_len);
 }
 
@@ -26,7 +27,9 @@ int print_s(va_list s)
  */
 int print_c(va_list c)
 {
-	_putchar(c);
+	char ch = va_arg(c, int);
+
+	_putchar(ch);
 	return (1);
 }
 	
@@ -38,16 +41,23 @@ int print_c(va_list c)
  */
 int print_d(va_list n)
 {
-	int d = 1, r = 0;
+	int d = 1, r = 0, num = va_arg(n, int);
+	unsigned int num_abs = 0;
 
-	if (n < 0)
+
+	if (num < 0)
 	{
 		_putchar('-');
 		r++;
+		num_abs = (unsigned)(num * -1);
+	}
+	else
+	{
+		num_abs = (unsigned)num;
 	}
 	while (1)
 	{
-		if (n / d * 10 >= 10)
+		if (num_abs / (d * 10) >= 10)
 			d *= 10;
 		else
 			break;
@@ -56,18 +66,18 @@ int print_d(va_list n)
 	{
 		if (d == 1)
 		{
-			if (n >= 10)
+			if (num_abs >= 10)
 			{
-				_putchar(((n / 10) % 10) + '0');
+				_putchar(((num_abs / 10) % 10) + '0');
 				r++;
 			}
-			_putchar(n % 10 + '0');
+			_putchar(num_abs % 10 + '0');
 			r++;
 			break;
 		}
 		else
 		{
-			_putchar((n / (d * 10)) % 10 + '0');
+			_putchar(((num_abs / (d * 10)) % 10) + '0');
 			d /= 10;
 			r++;
 		}
