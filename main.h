@@ -3,8 +3,15 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_c(char c);
-int print_s(char *s);
-char *save_d(int n);
+int print_c(va_list c);
+int print_s(va_list s);
+int print_d(va_list n);
+
+typedef struct format
+{
+	char *format;
+	int (*f)(va_list);
+	int r = f;
+}
 
 #endif
