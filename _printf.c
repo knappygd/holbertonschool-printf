@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 	va_list vl;
 
 	va_start(vl, format);
+	if (format == NULL)
+		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
@@ -24,30 +26,26 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (format[i + 1] == 'c' || format[i + 1] == 'd'
-					|| format[i + 1] == 'i' ||
-				       	format[i + 1] == 's')
+			if (reco_array(format[i + 1]) == 1)
 			{
 				result += get_func(format[i + 1])(vl);
 			}
 			else
 			{
-				if (format[i + 1] == '\0')
-				{
-					_putchar(format[i]);
-					result++;
-				}
-				else if (format[i + 1] == '%')
+				if (format[i + 1] == '%')
 				{
 					_putchar(format[i + 1]);
-					result++;
+				}
+				else if (format[i + 1] == '\0')
+				{
+					return (-1);
 				}
 				else
 				{
-					_putchar(format[i]);
 					_putchar(format[i + 1]);
-					result += 2;
+					i--;
 				}
+				result++;
 			}
 			i++;
 		}
