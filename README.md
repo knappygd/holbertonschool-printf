@@ -40,3 +40,18 @@ The supported formats of the _printf() function (as of the current version) incl
 ## Return value
 _printf() returns an *int*, which is the number of characters printed to console.
 The function will return -1, however, in the case that the format parameter is passed a ```NULL``` argument, or in the case a '%' is passed in a string followed by a terminating null caracter (```\0```).
+
+## Technical description
+This section covers the technical aspects of our function.
+### _putchar()
+_putchar() is a function used for printing a single character to the console. It takes a single character as an argument and prints it using the write() system call.
+### print_s()
+print_s() takes a va_list and prints the content of a ```char *``` va_arg using the write() system call by determining the va_arg length. This function equals the input to (null) in case it is passed a NULL value, instead of returning -1.
+### print_c()
+print_c() takes a va_list and prints the content of va_arg (read as an *int*) and prints the corresponding value from the ASCII table.
+### print_d()
+print_d() takes a va_list and prints the content of va_arg by reading each digit from the int passed, converting it to a ```char``` and printing it. 
+### get_func()
+get_func() determines which of the above functions should be used depending on the format passed to the _printf() function. The functions to select are defined in the structure ```format```.
+### main.h
+All function prototypes as well as the structure can be found in the main.h header file.
