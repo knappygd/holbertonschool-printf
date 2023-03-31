@@ -1,0 +1,166 @@
+/* General Styles */
+html, body {    
+    background-color: #fcfcfc;
+    font-family: sans-serif;
+    font-size: 100%;
+    color: #181818;
+}
+
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+h1, h2, h3, h4, h5, h5 {
+    font-family: helvetica, sans-serif;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: #008000;
+    margin-top: 25px;
+}
+
+h1 {
+
+    font-size: 18px;
+
+}
+
+h2 {
+
+    font-size: 16px;
+
+}
+
+h3 {
+    color: #006000;
+    font-style: italic;
+}
+
+p {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 0.5em;
+}
+
+p {
+    max-width: 750px;
+}
+
+table {
+    max-width: 750px;
+}
+
+hr {
+    max-width: 750px;
+    margin: 8px;
+}
+
+
+pre {
+    margin-left: 8px;
+}
+
+a {
+    color: #1030ff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4080dd;
+}
+
+a:hover, a:focus, a:active {
+    color: red;
+    background-color: #ffe0e0;
+    text-decoration: underline;
+}
+
+/* Preamble */
+
+
+/* End of Interfaces */
+
+
+div.nav-bar {
+    padding-left:8px;
+    padding-right:8px;
+    padding-top:3px;
+    padding-bottom:3px;
+    background-color: #e8e8e8;
+}
+
+div.footer {
+    padding-left:8px;
+    padding-right:8px;
+    padding-top:3px;
+    padding-bottom:3px;
+    background-color: #e8e8e8;
+}
+
+hr.nav-end {
+    height:0px;
+    margin-top:0px; 
+    color: #0000ff;
+    border-color:#ffffff;
+    width:100%;
+}
+
+hr.start-footer, hr.end-footer {
+    height:0px;
+    margin-top:0px; 
+    margin-bottom:0px; 
+    color: #0000ff;
+    border-color:#ffffff;
+    width:100%;
+}
+
+p.indented {
+    margin-left: 100px;
+}
+
+
+p.training-text {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+
+    font-weight: bold;
+    font-size: 15px;
+}
+
+strong, span.hl {
+    font-weight: bold;
+    color: #303030;
+}
+
+a.training-link:hover, a.training-link:visited, a.training-link:link, a.training-link:active {
+    color: #008000;
+}
+
+a.training-link:hover, a.training-link:active {
+    text-decoration: underline;
+    background-color: #ffd0d0;
+}
+
+/*
+a.training-link {
+    color: #228822;
+}
+*/
+
+p.nav-text {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+p.nav-text {
+    font-size: 15px;
+}
+
+
+
+
+

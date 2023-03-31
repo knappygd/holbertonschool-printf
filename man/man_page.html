@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+    <body>
+
+        <div class="page-top">
+            <a id="top_of_page"></a>
+        </div>
+        <!--%%%TOP_BAR%%%-->
+        <div class="nav-bar">
+            <table class="nav-table">
+                <tbody>
+                    <tr>
+                        <td class="nav-cell">
+                            <p class="nav-text">
+                                <a href="">holberton School</a> &gt; Project Printf &gt;
+                            </p>
+                        </td>
+                        <td class="training-cell">
+                            <p class="training-text">
+                                <a class="training-link" href="https://github.com/knappygd/holbertonschool-printf">Github repository</a>
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr class="nav-end">
+
+        <!--%%%PAGE_START%%%-->
+        <h1>_printf(1) — Manual page</h1>
+        <table class="sec-table">
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="section-dir">
+                            <a href="#NAME">NAME</a>
+                            | 
+                            <a href="#SYNOPSIS">SYNOPSIS</a>
+                            | 
+                            <a href="#DESCRIPTION">DESCRIPTION</a>
+                            | 
+                            <a href="#RETURN_VALUE">RETURN&nbsp;VALUE</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!--%%%TEXT_START%%%-->
+        <pre>
+            <span class="headline">_PRINTF(1)                    User Commands                   _PRINTF(1)</span>
+        </pre>
+        <h2>
+            <a id="NAME" href="#NAME"></a>
+            NAME  &nbsp; &nbsp; &nbsp; &nbsp;
+            <a href="#top_of_page"><span class="top-link">top</span></a>
+        </h2>
+        <pre>
+        _printf - produces output according to a formaat.
+        </pre>
+        <h2>
+            <a id="SYNOPSIS" href="#SYNOPSIS"></a>
+            SYNOPSIS  &nbsp; &nbsp; &nbsp; &nbsp; 
+            <a href="#top_of_page"><span class="top-link">top</span></a>
+        </h2>
+        <pre>       
+            <b>printf </b><i>FORMAT</i> [<i>ARGUMENT</i>]...
+        </pre>
+        <h2>
+            <a id="DESCRIPTION" href="#DESCRIPTION"></a>
+            DESCRIPTION  &nbsp; &nbsp; &nbsp; &nbsp; 
+            <a href="#top_of_page"><span class="top-link">top</span></a>
+        </h2>
+        <pre>
+            According to the FORMAT prints ARGUMENT(s):
+            The format string is a character string, with zero or more directives specifying how the arguments are converted to output. Ordinary characters (not %) are printed unchanged in the output, and the % character, followed by a conversion specifier, introduces the conversion of the passed arguments.
+            The arguments are used in the order given, so they must match the conversion specifier, and it is an error if there are not enough arguments.
+        
+            <b>conversion specifiers</b>
+            Characters that, preceded by the character %, specifies a type of conversion to be applied in arguments.
+            <b>d, i</b> The int argument is printed.
+            <b>c</b>    The int argument is converted to a char and printed.
+            <b>s</b>    The characters from the char * argument (point to an array of characters) are printed up to a terminating null byte (not included). If the pointer is NULL, prints "(null)"
+            <b>%</b>    A '%' is printed, nothing is converted.
+        </pre>
+        <h2>
+            <a id="RETURN_VALUE" href="#RETURN_VALUE"></a>
+            RETURN &nbsp;VALUE&nbsp; &nbsp; &nbsp; &nbsp; 
+            <a href="#top_of_page"><span class="top-link">top</span></a>
+        </h2>
+        <pre>       
+            The function returns the number of characters printed.
+            If an output error is encountered, for example if <i>format</i> is null, a negative value is returned.
+        </pre>
+        <h2>
+            <a id="EXAMPLES" href="#EXAMPLES"></a>
+            EXAMPLES &nbsp; &nbsp; &nbsp; &nbsp; 
+            <a href="#top_of_page"><span class="top-link">top</span></a>
+        </h2>
+        <pre>
+            _printf(const char*<i>format</i>, ...)
+
+            To print <i>a string</i>
+            
+            _printf("%s", "Hello world");
+
+            To print <i>a interger</i>
+
+            _printf("%d", 98);
+
+        </pre>
+        <hr class="start-footer">
+        <div class="footer"> 
+            <table class="colophon-table">
+                <tbody>
+                    <tr>
+                        <td class="pub-info">
+                            <p>
+                                Created 2023-03-30
+                                by Emilio Damasco and Rocío Pallas, 
+                                for the 
+                                <a href="https://holbertonschool.uy/">Holberton School</a> 
+                                project "Printf".
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>    
+        </div>
+        <hr class="end-footer">
+    </body>
+</html>
