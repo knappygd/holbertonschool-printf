@@ -16,7 +16,6 @@ int decimal(va_list);
 int rot_13(va_list);
 int hex(va_list);
 int x_to_upper(va_list);
-int print_per(va_list);
 int bin(va_list);
 int baseconv(unsigned int, unsigned int);
 int eq_pos(int);
