@@ -9,14 +9,13 @@
 int hex(va_list vl)
 {
 	int i, res = 0;
-	n_hex = va_arg(vl, unsigned int);
-	char *conv = baseconv(n_hex, 16);
+	unsigned int n_hex = va_arg(vl, unsigned int);
+	char *hex = baseconv(n_hex, 16);
 	
-	for (i = 0; n_hex[i] != '\0'; i++)
+	for (i = 0; hex[i] != '\0'; i++)
 	{
 		_putchar(n_hex[i]);
 		res++;
 	}
-
 	return (res);
 }
