@@ -9,14 +9,13 @@
 int bin(va_list vl)
 {
 	int i, res = 0;
-	n_bin = va_arg(vl, unsigned int);
-	char *conv = baseconv(n_bin, 2);
+	unsigned int n_bin = va_arg(vl, unsigned int);
+	char *n = baseconv(n_bin, 2);
 	
-	for (i = 0; n_bin[i] != '\0'; i++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		_putchar(n_bin[i]);
+		_putchar(n[i]);
 		res++;
 	}
-
 	return (res);
 }

@@ -9,12 +9,12 @@
  */
 int decimal(va_list vl)
 {
-	int n = va_arg(vl, int);
+	int n = va_arg(vl, int), res = 0;
 	unsigned int num;
 
 	if (n >= 0)
 	{
-		num = (unsigned int)n
+		num = (unsigned int)n;
 		res = d(num);
 	}
 	else
